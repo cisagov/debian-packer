@@ -1,0 +1,11 @@
+---
+- hosts: all
+  name: Install ufw
+  become: yes
+  become_method: sudo
+  roles:
+    - ufw
+  vars:
+    # Do not actually enforce firewall rules.  The user must turn
+    # UFW on if they want it.
+    state: disabled
