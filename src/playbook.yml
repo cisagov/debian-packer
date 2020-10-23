@@ -5,6 +5,9 @@
 - name: Import UFW playbook
   import_playbook: ufw.yml
 
+- name: Import VNC playbook
+  import_playbook: vnc.yml
+
 - name: Import cloud-init playbook
   import_playbook: cloud_init.yml
 

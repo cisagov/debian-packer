@@ -26,5 +26,7 @@
   name: ufw
 - src: https://github.com/cisagov/ansible-role-upgrade
   name: upgrade
+- src: https://github.com/cisagov/ansible-role-vnc-server
+  name: vnc
 - src: https://github.com/cisagov/ansible-role-xfce
   name: xfce
