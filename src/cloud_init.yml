@@ -1,0 +1,17 @@
+---
+# Ensure all cloud-init services are enabled (in some distributions, they
+# are not enabled by default).
+- hosts: all
+  name: Enable all cloud-init services
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Enable all cloud-init services
+      service:
+        name: "{{ item }}"
+        enabled: yes
+      loop:
+        - cloud-init-local
+        - cloud-init
+        - cloud-config
+        - cloud-final

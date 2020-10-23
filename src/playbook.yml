@@ -2,5 +2,8 @@
 - name: Import base image playbook
   import_playbook: base.yml
 
+- name: Import cloud-init playbook
+  import_playbook: cloud_init.yml
+
 - name: Import AWS playbook
   import_playbook: aws.yml
