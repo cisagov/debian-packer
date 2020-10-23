@@ -25,11 +25,11 @@ locals {
 }
 
 # The most-recent AMI created by cisagov/debian-packer
-data "aws_ami" "example" {
+data "aws_ami" "debian" {
   filter {
     name = "name"
     values = [
-      "example-hvm-*-x86_64-ebs",
+      "debian-hvm-*-x86_64-ebs",
     ]
   }
 
