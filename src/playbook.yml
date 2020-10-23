@@ -4,6 +4,3 @@
 
 - name: Import AWS playbook
   import_playbook: aws.yml
-
-- name: Import Example playbook
-  import_playbook: example.yml
