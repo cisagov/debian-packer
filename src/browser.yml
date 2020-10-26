@@ -1,0 +1,9 @@
+---
+- hosts: all
+  name: Install Firefox web browser
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install Firefox web browser
+      package:
+        name: firefox-esr

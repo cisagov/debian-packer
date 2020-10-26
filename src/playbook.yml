@@ -8,6 +8,9 @@
 - name: Import VNC playbook
   import_playbook: vnc.yml
 
+- name: Import browser playbook
+  import_playbook: browser.yml
+
 - name: Import cloud-init playbook
   import_playbook: cloud_init.yml
 
