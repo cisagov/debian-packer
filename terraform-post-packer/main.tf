@@ -57,5 +57,5 @@ module "ami_launch_permission" {
   }
 
   account_name_regex = local.account_name_regex
-  ami_id             = data.aws_ami.example.id
+  ami_id             = data.aws_ami.debian.id
 }
