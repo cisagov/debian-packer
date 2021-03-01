@@ -5,5 +5,5 @@
   become_method: sudo
   tasks:
     - name: Install Firefox web browser
-      package:
+      ansible.builtin.package:
         name: firefox-esr
