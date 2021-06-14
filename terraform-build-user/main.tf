@@ -18,8 +18,4 @@ module "iam_user" {
     "/vnc/ssh/rsa_private_key",
   ]
   user_name = "build-debian-packer"
-  tags = {
-    Team        = "CISA - Development"
-    Application = "debian-packer"
-  }
 }
