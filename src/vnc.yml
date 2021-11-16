@@ -15,7 +15,6 @@
           # before this one, so that the efs_users group has been
           # created.
           - efs_users
-          - kali-trusted
         # Note that we use the same UID for the VNC and Samba guest
         # users on all instances.  This helps us avoid UID/GID
         # collisions with files written to the EFS share.
