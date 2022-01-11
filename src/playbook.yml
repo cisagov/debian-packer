@@ -5,6 +5,12 @@
 - name: Import base image playbook
   ansible.builtin.import_playbook: base.yml
 
+- name: Import browser playbook
+  ansible.builtin.import_playbook: browser.yml
+
+- name: Import cloud-init playbook
+  ansible.builtin.import_playbook: cloud_init.yml
+
 - name: Import UFW playbook
   ansible.builtin.import_playbook: ufw.yml
 
@@ -17,9 +23,3 @@
 # a user created in the VNC playbook.
 - name: Import Xfce playbook
   ansible.builtin.import_playbook: xfce.yml
-
-- name: Import browser playbook
-  ansible.builtin.import_playbook: browser.yml
-
-- name: Import cloud-init playbook
-  ansible.builtin.import_playbook: cloud_init.yml
