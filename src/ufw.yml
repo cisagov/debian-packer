@@ -1,11 +1,13 @@
 ---
 - hosts: all
-  name: Install ufw
+  name: Install UFW
   become: yes
   become_method: sudo
-  roles:
-    - ufw
-  vars:
-    # Do not actually enforce firewall rules.  The user must turn
-    # UFW on if they want it.
-    state: disabled
+  tasks:
+    - name: Install UFW
+      ansible.builtin.include_role:
+        name: ufw
+      vars:
+        # Do not actually enforce firewall rules.  The user must turn
+        # UFW on if they want it.
+        state: disabled
