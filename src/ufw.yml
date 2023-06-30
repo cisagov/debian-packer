@@ -10,4 +10,4 @@
       vars:
         # Do not actually enforce firewall rules.  The user must turn
         # UFW on if they want it.
-        state: disabled
+        ufw_state: disabled
