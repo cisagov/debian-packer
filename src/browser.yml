@@ -2,7 +2,7 @@
 - hosts: all
   name: Install Firefox web browser
   become: yes
-  become_method: sudo
+  become_method: ansible.builtin.sudo
   tasks:
     - name: Install Firefox web browser
       ansible.builtin.package:
