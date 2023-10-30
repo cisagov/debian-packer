@@ -3,13 +3,13 @@
 # are not enabled by default).
 - hosts: all
   name: Enable all cloud-init services
-  become: yes
+  become: true
   become_method: ansible.builtin.sudo
   tasks:
     - name: Enable all cloud-init services
       ansible.builtin.service:
         name: "{{ item }}"
-        enabled: yes
+        enabled: true
       loop:
         - cloud-init-local
         - cloud-init
