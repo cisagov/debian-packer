@@ -1,7 +1,7 @@
 locals {
   tags = {
-    Team        = "CISA - Development"
     Application = "debian-packer"
+    Team        = "CISA - Development"
   }
 }
 
