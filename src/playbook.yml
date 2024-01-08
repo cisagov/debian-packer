@@ -29,7 +29,12 @@
   become: true
   become_method: ansible.builtin.sudo
   tasks:
-    - name: Create override file for systemd-resolved.service
+    - name: Ensure that directory exists for systemd-resolved.service unit drop-in file
+      ansible.builtin.file:
+        mode: 0755
+        path: /etc/systemd/system/systemd-resolved.service.d
+        state: directory
+    - name: Create drop-in file for systemd-resolved.service
       ansible.builtin.copy:
         content: >-
           [Unit]
