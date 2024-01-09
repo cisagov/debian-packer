@@ -36,7 +36,7 @@
         state: directory
     - name: Create drop-in file for systemd-resolved.service
       ansible.builtin.copy:
-        content: >-
+        content: |
           [Unit]
           LogLevelMax=6
         dest: /etc/systemd/system/systemd-resolved.service.d/override.conf
