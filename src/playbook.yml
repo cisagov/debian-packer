@@ -44,3 +44,24 @@
     - name: SystemD daemon-reload
       ansible.builtin.systemd:
         daemon-reload: true
+
+- hosts: all
+  name: Force debug output from systemd-networkd.service
+  become: true
+  become_method: ansible.builtin.sudo
+  tasks:
+    - name: Ensure that directory exists for systemd-networkd.service unit drop-in file
+      ansible.builtin.file:
+        mode: 0755
+        path: /etc/systemd/system/systemd-networkd.service.d
+        state: directory
+    - name: Create drop-in file for systemd-networkd.service
+      ansible.builtin.copy:
+        content: |
+          [Service]
+          LogLevelMax=debug
+        dest: /etc/systemd/system/systemd-networkd.service.d/override.conf
+        mode: 0644
+    - name: SystemD daemon-reload
+      ansible.builtin.systemd:
+        daemon-reload: true
