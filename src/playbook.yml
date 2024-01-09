@@ -37,8 +37,8 @@
     - name: Create drop-in file for systemd-resolved.service
       ansible.builtin.copy:
         content: |
-          [Unit]
-          LogLevelMax=6
+          [Service]
+          LogLevelMax=debug
         dest: /etc/systemd/system/systemd-resolved.service.d/override.conf
         mode: 0644
     - name: SystemD daemon-reload
