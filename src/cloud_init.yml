@@ -15,3 +15,10 @@
         - cloud-init
         - cloud-config
         - cloud-final
+    # python3-yaml is required by the cloud-init Python script that
+    # appends the necessary DHCP options to the Netplan configuration
+    # created by cloud-init.
+    - name: Install python3-pyyaml
+      ansible.builtin.package:
+        name:
+          - python3-yaml
