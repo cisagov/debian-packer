@@ -1,8 +1,8 @@
 ---
 # Ensure all cloud-init services are enabled (in some distributions, they
 # are not enabled by default).
-- hosts: all
-  name: Enable all cloud-init services
+- name: Enable all cloud-init services
+  hosts: all
   become: true
   become_method: ansible.builtin.sudo
   tasks:
