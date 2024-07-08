@@ -31,14 +31,14 @@ data "aws_ami_ids" "historical_amis" {
   filter {
     name = "architecture"
     values = [
-      "x86_64",
+      "arm64",
     ]
   }
 
   filter {
     name = "name"
     values = [
-      "debian-hvm-*-x86_64-ebs",
+      "debian-hvm-*-arm64-ebs",
     ]
   }
 
