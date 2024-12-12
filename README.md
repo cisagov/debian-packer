@@ -2,8 +2,8 @@
 
 [![GitHub Build Status](https://github.com/cisagov/debian-packer/workflows/build/badge.svg)](https://github.com/cisagov/debian-packer/actions)
 
-This project can be used to build a [Debian 10 (Buster)](https://www.debian.org/releases/buster/)
-AMI.
+This project can be used to build a [Debian 12
+(Bookworm)](https://www.debian.org/releases/buster/) AMI.
 
 ## Pre-requisites ##
 
