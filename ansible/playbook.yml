@@ -15,9 +15,6 @@
 - name: Import browser playbook
   ansible.builtin.import_playbook: browser.yml
 
-- name: Import cloud-init playbook
-  ansible.builtin.import_playbook: cloud_init.yml
-
 - name: Import UFW playbook
   ansible.builtin.import_playbook: ufw.yml
 
