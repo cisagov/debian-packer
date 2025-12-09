@@ -1,9 +1,11 @@
 # debian-packer 🍥📦 #
 
 [![GitHub Build Status](https://github.com/cisagov/debian-packer/workflows/build/badge.svg)](https://github.com/cisagov/debian-packer/actions)
+[![License](https://img.shields.io/github/license/cisagov/debian-packer)](https://spdx.org/licenses/)
+[![CodeQL](https://github.com/cisagov/debian-packer/workflows/CodeQL/badge.svg)](https://github.com/cisagov/debian-packer/actions/workflows/codeql-analysis.yml)
 
-This project can be used to build a [Debian 12
-(Bookworm)](https://www.debian.org/releases/bookworm/) AMI.
+This project can be used to build a [Debian 13
+(Trixie)](https://www.debian.org/releases/bookworm/) AMI.
 
 ## Pre-requisites ##
 
