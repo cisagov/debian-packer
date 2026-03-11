@@ -1,7 +1,11 @@
 ---
+# Both the collections and roles lists must exist in this file because
+# we use both ansible-galaxy collection install and ansible-galaxy
+# role install to install collections and roles from it.  Note that
+# either (or both) can be an empty list, e.g., collections: [].
 collections:
-  # Required because we are using the amazon.aws.ssm_parameter Ansible
-  # lookup plugin to pull parameter values from AWS Parameter Store.
+  # Required by the following playbooks:
+  # - ansible/wazuh_agent.yml (uses amazon.aws.ssm_parameter)
   - amazon.aws
   # Required by the following Ansible roles:
   # - ansible-role-amazon-efs-utils (uses community.general.json_query
